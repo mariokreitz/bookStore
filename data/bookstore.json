@@ -4,6 +4,18 @@
     "location": "123 Book St, Fictionville, Imaginary Country",
     "inventory": [
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-3-16-148410-0",
         "title": "The Mysterious Island",
         "author": "Jules Verne",
@@ -20,6 +32,18 @@
         "reviews": 520
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-7432-7356-5",
         "title": "The Da Vinci Code",
         "author": "Dan Brown",
@@ -36,6 +60,18 @@
         "reviews": 450
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-1-4028-9467-2",
         "title": "To Kill a Mockingbird",
         "author": "Harper Lee",
@@ -52,6 +88,18 @@
         "reviews": 980
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-452-28423-4",
         "title": "1984",
         "author": "George Orwell",
@@ -68,6 +116,18 @@
         "reviews": 1100
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-7432-7357-2",
         "title": "Angels & Demons",
         "author": "Dan Brown",
@@ -84,6 +144,18 @@
         "reviews": 400
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-14-028333-4",
         "title": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
@@ -100,6 +172,18 @@
         "reviews": 750
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-452-28423-5",
         "title": "Brave New World",
         "author": "Aldous Huxley",
@@ -116,6 +200,18 @@
         "reviews": 900
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-316-76948-0",
         "title": "The Catcher in the Rye",
         "author": "J.D. Salinger",
@@ -132,6 +228,18 @@
         "reviews": 600
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-670-81302-8",
         "title": "The Road",
         "author": "Cormac McCarthy",
@@ -148,6 +256,18 @@
         "reviews": 670
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-7432-7356-6",
         "title": "Inferno",
         "author": "Dan Brown",
@@ -164,6 +284,18 @@
         "reviews": 430
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-14-018639-0",
         "title": "Of Mice and Men",
         "author": "John Steinbeck",
@@ -180,6 +312,18 @@
         "reviews": 580
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-618-00222-8",
         "title": "The Lord of the Rings: The Fellowship of the Ring",
         "author": "J.R.R. Tolkien",
@@ -196,6 +340,18 @@
         "reviews": 1300
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-618-00223-5",
         "title": "The Lord of the Rings: The Two Towers",
         "author": "J.R.R. Tolkien",
@@ -212,6 +368,18 @@
         "reviews": 1250
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-618-00224-2",
         "title": "The Lord of the Rings: The Return of the King",
         "author": "J.R.R. Tolkien",
@@ -228,6 +396,18 @@
         "reviews": 1350
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-7432-7357-3",
         "title": "Digital Fortress",
         "author": "Dan Brown",
@@ -244,6 +424,18 @@
         "reviews": 350
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-316-76948-1",
         "title": "Franny and Zooey",
         "author": "J.D. Salinger",
@@ -260,6 +452,18 @@
         "reviews": 400
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-7432-7358-0",
         "title": "Deception Point",
         "author": "Dan Brown",
@@ -276,6 +480,18 @@
         "reviews": 390
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-452-28423-6",
         "title": "Slaughterhouse-Five",
         "author": "Kurt Vonnegut",
@@ -292,6 +508,18 @@
         "reviews": 600
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-452-28423-7",
         "title": "Catch-22",
         "author": "Joseph Heller",
@@ -308,6 +536,18 @@
         "reviews": 630
       },
       {
+        "comments": [
+          {
+            "text": "A great read",
+            "author": "John Doe",
+            "date": "2019-01-01"
+          },
+          {
+            "text": "A classic",
+            "author": "Jane Doe",
+            "date": "2019-01-02"
+          }
+        ],
         "isbn": "978-0-618-00222-9",
         "title": "The Hobbit",
         "author": "J.R.R. Tolkien",
