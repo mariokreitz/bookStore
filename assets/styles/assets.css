@@ -322,3 +322,24 @@ td:first-child {
   flex-direction: column;
   gap: 10px;
 }
+
+.form-control {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--secondary-text-color);
+  resize: none;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+}
