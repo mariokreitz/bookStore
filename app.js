@@ -97,9 +97,13 @@ function handleAddComment(event) {
   event.preventDefault();
 
   const commentForm = event.target.parentElement;
-  console.log(commentForm);
 
   const formData = new FormData(commentForm);
+  if (formData.keys.length === 0) {
+    showError(commentForm);
+    return;
+  }
+
   const commentData = Object.fromEntries(formData);
   const bookIndex = Number(commentForm.dataset.bookIndex);
 
@@ -117,6 +121,14 @@ function handleAddComment(event) {
   localStorage.setItem("data", JSON.stringify(localData));
 
   loadPage();
+}
+
+function showError(commentForm) {
+  const notification = document.createElement("p");
+  notification.classList.add("notification");
+  notification.textContent = "Please fill out all fields!";
+  commentForm.appendChild(notification);
+  setTimeout(() => notification.remove(), 3000);
 }
 
 function toggleFavorite(event) {
