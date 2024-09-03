@@ -484,6 +484,10 @@ textarea:focus {
 }
 
 @media screen and (max-width: 426px) {
+  .card-header {
+    margin-bottom: 20px;
+  }
+
   .card-body {
     display: none;
   }
@@ -494,5 +498,20 @@ textarea:focus {
 
   .comment-text {
     padding: unset;
+  }
+
+  .card-description {
+    align-items: center;
+  }
+
+  .call-to-action {
+    align-items: center;
+    gap: 20px;
+  }
+
+  .in-stock-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
