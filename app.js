@@ -17,11 +17,13 @@ import { getData, putData } from "./scripts/FetchData.js";
 let books = {};
 
 document.addEventListener("DOMContentLoaded", () => {
+  loadPage();
+});
+
+function loadPage() {
   const { header, topNavbar, sideNavbar, content, footer } = getAllElements();
   renderPage(header, topNavbar, sideNavbar, content, footer);
-
-  console.log("DOM fully loaded and parsed");
-});
+}
 
 function getAllElements() {
   const header = document.getElementById("header");
@@ -54,13 +56,11 @@ const sideNavbarItems = [
 
 async function renderPage(header, topNavbar, sideNavbar, content, footer) {
   await loadData();
-
   header.innerHTML = Header(Bookmark, ShoppingCart, User);
   topNavbar.innerHTML = TopNavbar(topNavbarItems);
   sideNavbar.innerHTML = SideNavbar(sideNavbarItems);
   content.innerHTML = Content(books, HeartEmpty, HeartFilled, StarEmpty, StarFilled);
   footer.innerHTML = Footer();
-
   addEventListenersToBooks();
 }
 
@@ -76,7 +76,6 @@ function addEventListenersToBooks() {
   submitButtons.forEach((button) => {
     button.addEventListener("click", handleButtonClick);
   });
-
   const heartButton = document.querySelectorAll(".heart");
   heartButton.forEach((button) => {
     button.addEventListener("click", toggleFavorite);
@@ -84,31 +83,28 @@ function addEventListenersToBooks() {
 }
 
 function handleButtonClick(event) {
+  event.preventDefault();
   const formData = new FormData(event.target.parentElement);
-  console.log(formData.keys.length != 0 ? formData : "no form data");
-
   const data = Object.fromEntries(formData.entries());
-
   const bookIndex = Number(event.target.dataset.bookIndex);
   const book = books[bookIndex];
-
   const newComments = [...book.comments, { ...data, date: new Date() }];
   book.comments = newComments;
   const localData = JSON.parse(localStorage.getItem("data"));
   localData.bookstore.inventory[bookIndex] = book;
   localStorage.setItem("data", JSON.stringify(localData));
+  loadPage();
 }
 
 function toggleFavorite(event) {
   event.preventDefault();
-
   const bookElement = event.target.closest(".heart");
   const bookIndex = Number(bookElement.dataset.bookIndex);
-
   const book = books[bookIndex];
   book.favorite = !book.favorite;
-
+  book.likes += book.favorite ? 1 : -1;
   const localData = JSON.parse(localStorage.getItem("data"));
   localData.bookstore.inventory[bookIndex] = book;
   localStorage.setItem("data", JSON.stringify(localData));
+  loadPage();
 }
