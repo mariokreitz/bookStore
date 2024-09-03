@@ -16,6 +16,8 @@ import {
 document.addEventListener("DOMContentLoaded", () => {
   const { header, topNavbar, sideNavbar, content, footer } = getAllElements();
   renderPage(header, topNavbar, sideNavbar, content, footer);
+
+  console.log("DOM fully loaded and parsed");
 });
 
 function getAllElements() {
@@ -24,8 +26,6 @@ function getAllElements() {
   const sideNavbar = document.getElementById("side-navbar");
   const content = document.getElementById("content");
   const footer = document.getElementById("footer");
-
-  console.log("DOM fully loaded and parsed");
 
   return {
     header,
@@ -55,4 +55,17 @@ async function renderPage(header, topNavbar, sideNavbar, content, footer) {
   sideNavbar.innerHTML = SideNavbar(sideNavbarItems);
   content.innerHTML = await Content(HeartEmpty, HeartFilled, StarEmpty, StarFilled);
   footer.innerHTML = Footer();
+
+  addEventListenersToSubmitButtons();
+}
+
+function addEventListenersToSubmitButtons() {
+  const submitButtons = document.querySelectorAll('button[type="submit"]');
+  submitButtons.forEach((button) => {
+    button.addEventListener("click", handleButtonClick);
+  });
+}
+
+function handleButtonClick(event) {
+  console.log("Button clicked in app.js for book:", event.target.dataset.bookIndex);
 }
