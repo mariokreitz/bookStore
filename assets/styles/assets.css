@@ -202,6 +202,7 @@ aside#side-navbar h1 {
 }
 
 .heart-container > span.heart {
+  fill: red;
   cursor: pointer;
 }
 
