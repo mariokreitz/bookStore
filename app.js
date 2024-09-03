@@ -12,7 +12,6 @@ import {
   StarFilled,
   User,
 } from "./scripts/templates/icons.js";
-import { getData, putData } from "./scripts/FetchData.js";
 
 let books = {};
 
@@ -21,24 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function loadPage() {
-  const { header, topNavbar, sideNavbar, content, footer } = getAllElements();
+  const { header, topNavbar, sideNavbar, content, footer } = getElements();
   renderPage(header, topNavbar, sideNavbar, content, footer);
 }
 
-function getAllElements() {
-  const header = document.getElementById("header");
-  const topNavbar = document.getElementById("top-navbar");
-  const sideNavbar = document.getElementById("side-navbar");
-  const content = document.getElementById("content");
-  const footer = document.getElementById("footer");
-
-  return {
-    header,
-    topNavbar,
-    sideNavbar,
-    content,
-    footer,
+function getElements() {
+  const elements = {
+    header: document.getElementById("header"),
+    topNavbar: document.getElementById("top-navbar"),
+    sideNavbar: document.getElementById("side-navbar"),
+    content: document.getElementById("content"),
+    footer: document.getElementById("footer"),
   };
+
+  return elements;
 }
 
 const topNavbarItems = ["Home", "Books", "Magazine", "Textbooks", "Audiobooks", "Recommended", "Sale"];
@@ -54,57 +49,89 @@ const sideNavbarItems = [
   "Fiction",
 ];
 
-async function renderPage(header, topNavbar, sideNavbar, content, footer) {
+async function renderPage(headerElement, topNavbarElement, sideNavbarElement, contentElement, footerElement) {
   await loadData();
-  header.innerHTML = Header(Bookmark, ShoppingCart, User);
-  topNavbar.innerHTML = TopNavbar(topNavbarItems);
-  sideNavbar.innerHTML = SideNavbar(sideNavbarItems);
-  content.innerHTML = Content(books, HeartEmpty, HeartFilled, StarEmpty, StarFilled);
-  footer.innerHTML = Footer();
-  addEventListenersToBooks();
+
+  headerElement.innerHTML = Header(Bookmark, ShoppingCart, User);
+  topNavbarElement.innerHTML = TopNavbar(topNavbarItems);
+  sideNavbarElement.innerHTML = SideNavbar(sideNavbarItems);
+  contentElement.innerHTML = Content(books, HeartEmpty, HeartFilled, StarEmpty, StarFilled);
+  footerElement.innerHTML = Footer();
+
+  addEventListenersToBookElements();
+}
+
+async function fetchLocalData() {
+  const storedData = localStorage.getItem("data");
+
+  if (storedData) {
+    return JSON.parse(storedData);
+  }
+
+  const response = await fetch("../../data/bookstore.json");
+  const remoteData = await response.json();
+
+  localStorage.setItem("data", JSON.stringify(remoteData));
+
+  return remoteData;
 }
 
 async function loadData() {
-  const localData = JSON.parse(localStorage.getItem("data"));
-  const remoteData = localData || (await getData("../../data/bookstore.json"));
-  localStorage.setItem("data", JSON.stringify(remoteData));
-  books = remoteData.bookstore.inventory;
+  const data = await fetchLocalData();
+  books = data.bookstore.inventory;
 }
 
-function addEventListenersToBooks() {
-  const submitButtons = document.querySelectorAll('button[type="submit"]');
-  submitButtons.forEach((button) => {
-    button.addEventListener("click", handleButtonClick);
+function addEventListenersToBookElements() {
+  const submitButtons = document.querySelectorAll("button[type='submit']");
+  submitButtons.forEach((submitButton) => {
+    submitButton.addEventListener("click", handleAddComment);
   });
-  const heartButton = document.querySelectorAll(".heart");
-  heartButton.forEach((button) => {
-    button.addEventListener("click", toggleFavorite);
+
+  const heartButtons = document.querySelectorAll(".heart");
+  heartButtons.forEach((heartButton) => {
+    heartButton.addEventListener("click", toggleFavorite);
   });
 }
 
-function handleButtonClick(event) {
+function handleAddComment(event) {
   event.preventDefault();
-  const formData = new FormData(event.target.parentElement);
-  const data = Object.fromEntries(formData.entries());
-  const bookIndex = Number(event.target.dataset.bookIndex);
+
+  const commentForm = event.target.parentElement;
+  console.log(commentForm);
+
+  const formData = new FormData(commentForm);
+  const commentData = Object.fromEntries(formData);
+  const bookIndex = Number(commentForm.dataset.bookIndex);
+
   const book = books[bookIndex];
-  const newComments = [...book.comments, { ...data, date: new Date() }];
-  book.comments = newComments;
+
+  const newComment = {
+    ...commentData,
+    date: new Date().toLocaleDateString("en-GB"),
+  };
+
+  book.comments = [...book.comments, newComment];
+
   const localData = JSON.parse(localStorage.getItem("data"));
   localData.bookstore.inventory[bookIndex] = book;
   localStorage.setItem("data", JSON.stringify(localData));
+
   loadPage();
 }
 
 function toggleFavorite(event) {
   event.preventDefault();
+
   const bookElement = event.target.closest(".heart");
   const bookIndex = Number(bookElement.dataset.bookIndex);
   const book = books[bookIndex];
+
   book.favorite = !book.favorite;
   book.likes += book.favorite ? 1 : -1;
+
   const localData = JSON.parse(localStorage.getItem("data"));
   localData.bookstore.inventory[bookIndex] = book;
+
   localStorage.setItem("data", JSON.stringify(localData));
   loadPage();
 }
