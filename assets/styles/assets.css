@@ -201,6 +201,10 @@ aside#side-navbar h1 {
   gap: 10px;
 }
 
+.heart-container > span.heart {
+  cursor: pointer;
+}
+
 .in-stock-container {
   display: flex;
   align-items: center;
@@ -332,7 +336,7 @@ td:first-child {
   resize: none;
 }
 
-button[type="submit"] {
+.add-review-form button[type="submit"] {
   background-color: var(--primary-color);
   color: var(--background-color);
   border: none;
@@ -342,4 +346,20 @@ button[type="submit"] {
   font-weight: bold;
   cursor: pointer;
   width: 100px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:valid {
+  border-color: green;
+}
+
+textarea:valid {
+  border-color: green;
+}
+
+textarea:focus {
+  outline: none;
 }
