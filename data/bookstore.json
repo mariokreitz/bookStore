@@ -8,12 +8,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-3-16-148410-0",
@@ -22,7 +22,7 @@
         "genre": "Science Fiction",
         "price": 12.99,
         "quantity": 34,
-        "publication_date": "1874-07-01",
+        "publication_date": "07/01/1874",
         "publisher": "Pierre-Jules Hetzel",
         "cover_image_url": "The_Mysterious_Island.jpg",
         "rating": 3.5,
@@ -36,12 +36,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-7432-7356-5",
@@ -50,7 +50,7 @@
         "genre": "Thriller",
         "price": 14.99,
         "quantity": 20,
-        "publication_date": "2003-03-18",
+        "publication_date": "03/18/2003",
         "publisher": "Doubleday",
         "cover_image_url": "The_Da_Vinci_Code.jpg",
         "rating": 4.2,
@@ -64,12 +64,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-1-4028-9467-2",
@@ -78,7 +78,7 @@
         "genre": "Fiction",
         "price": 10.99,
         "quantity": 45,
-        "publication_date": "1960-07-11",
+        "publication_date": "07/11/1960",
         "publisher": "J.B. Lippincott & Co.",
         "cover_image_url": "To_Kill_a_Mockingbird.jpg",
         "rating": 4.8,
@@ -92,12 +92,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-452-28423-4",
@@ -106,7 +106,7 @@
         "genre": "Dystopian",
         "price": 9.99,
         "quantity": 52,
-        "publication_date": "1949-06-08",
+        "publication_date": "06/08/1949",
         "publisher": "Secker & Warburg",
         "cover_image_url": "1984.jpg",
         "rating": 2.7,
@@ -120,12 +120,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-7432-7357-2",
@@ -134,7 +134,7 @@
         "genre": "Thriller",
         "price": 13.99,
         "quantity": 25,
-        "publication_date": "2000-05-01",
+        "publication_date": "05/01/2000",
         "publisher": "Pocket Books",
         "cover_image_url": "Angels_And_Demons.jpg",
         "rating": 4.1,
@@ -148,12 +148,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-14-028333-4",
@@ -162,7 +162,7 @@
         "genre": "Classic",
         "price": 8.99,
         "quantity": 60,
-        "publication_date": "1925-04-10",
+        "publication_date": "04/10/1925",
         "publisher": "Charles Scribner's Sons",
         "cover_image_url": "The_Great_Gatsby.jpg",
         "rating": 4.3,
@@ -176,12 +176,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-452-28423-5",
@@ -190,7 +190,7 @@
         "genre": "Dystopian",
         "price": 10.99,
         "quantity": 40,
-        "publication_date": "1932-08-30",
+        "publication_date": "08/30/1932",
         "publisher": "Chatto & Windus",
         "cover_image_url": "Brave_New_World.jpg",
         "rating": 4.6,
@@ -204,12 +204,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-316-76948-0",
@@ -218,7 +218,7 @@
         "genre": "Fiction",
         "price": 9.99,
         "quantity": 38,
-        "publication_date": "1951-07-16",
+        "publication_date": "07/16/1951",
         "publisher": "Little, Brown and Company",
         "cover_image_url": "The_Catcher_in_the_Rye.jpg",
         "rating": 4.0,
@@ -232,12 +232,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-670-81302-8",
@@ -246,7 +246,7 @@
         "genre": "Post-Apocalyptic",
         "price": 12.99,
         "quantity": 30,
-        "publication_date": "2006-09-26",
+        "publication_date": "09/26/2006",
         "publisher": "Alfred A. Knopf",
         "cover_image_url": "The_Road.jpg",
         "rating": 4.5,
@@ -260,12 +260,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-7432-7356-6",
@@ -274,7 +274,7 @@
         "genre": "Thriller",
         "price": 14.99,
         "quantity": 18,
-        "publication_date": "2013-05-14",
+        "publication_date": "05/14/2013",
         "publisher": "Doubleday",
         "cover_image_url": "Inferno.jpg",
         "rating": 4.2,
@@ -288,12 +288,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-14-018639-0",
@@ -302,7 +302,7 @@
         "genre": "Fiction",
         "price": 7.99,
         "quantity": 50,
-        "publication_date": "1937-02-06",
+        "publication_date": "02/06/1937",
         "publisher": "Covici Friede",
         "cover_image_url": "Of_Mice_and_Men.jpg",
         "rating": 4.4,
@@ -316,12 +316,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-618-00222-8",
@@ -330,7 +330,7 @@
         "genre": "Fantasy",
         "price": 15.99,
         "quantity": 70,
-        "publication_date": "1954-07-29",
+        "publication_date": "07/29/1954",
         "publisher": "George Allen & Unwin",
         "cover_image_url": "The_Lord_of_the_Rings-The_Fellowship_of_the_Ring.jpg",
         "rating": 4.9,
@@ -344,12 +344,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-618-00223-5",
@@ -358,7 +358,7 @@
         "genre": "Fantasy",
         "price": 15.99,
         "quantity": 65,
-        "publication_date": "1954-11-11",
+        "publication_date": "11/11/1954",
         "publisher": "George Allen & Unwin",
         "cover_image_url": "The_Lord_of_the_Rings-The_Two_Towers.jpg",
         "rating": 4.8,
@@ -372,12 +372,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-618-00224-2",
@@ -386,7 +386,7 @@
         "genre": "Fantasy",
         "price": 15.99,
         "quantity": 60,
-        "publication_date": "1955-10-20",
+        "publication_date": "10/20/1955",
         "publisher": "George Allen & Unwin",
         "cover_image_url": "The_Lord_of_the_Ring-The_Return_of_the_King.jpg",
         "rating": 4.9,
@@ -400,12 +400,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-7432-7357-3",
@@ -414,7 +414,7 @@
         "genre": "Thriller",
         "price": 11.99,
         "quantity": 20,
-        "publication_date": "1998-02-11",
+        "publication_date": "02/11/1998",
         "publisher": "St. Martin's Press",
         "cover_image_url": "Digital_Fortress.jpg",
         "rating": 4.0,
@@ -428,12 +428,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-316-76948-1",
@@ -442,7 +442,7 @@
         "genre": "Fiction",
         "price": 9.99,
         "quantity": 33,
-        "publication_date": "1961-09-14",
+        "publication_date": "09/14/1961",
         "publisher": "Little, Brown and Company",
         "cover_image_url": "Franny_and_Zooey.jpg",
         "rating": 4.2,
@@ -456,12 +456,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-7432-7358-0",
@@ -470,7 +470,7 @@
         "genre": "Thriller",
         "price": 12.99,
         "quantity": 22,
-        "publication_date": "2001-11-01",
+        "publication_date": "11/01/2001",
         "publisher": "Simon & Schuster",
         "cover_image_url": "Deception_Point.jpg",
         "rating": 4.1,
@@ -484,12 +484,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-452-28423-6",
@@ -498,7 +498,7 @@
         "genre": "Science Fiction",
         "price": 9.99,
         "quantity": 27,
-        "publication_date": "1969-03-31",
+        "publication_date": "03/31/1969",
         "publisher": "Delacorte Press",
         "cover_image_url": "Slaughterhouse_Five.jpg",
         "rating": 4.4,
@@ -512,12 +512,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-452-28423-7",
@@ -526,7 +526,7 @@
         "genre": "Satire",
         "price": 11.99,
         "quantity": 31,
-        "publication_date": "1961-11-10",
+        "publication_date": "11/10/1961",
         "publisher": "Simon & Schuster",
         "cover_image_url": "Catch_22.jpg",
         "rating": 3.3,
@@ -540,12 +540,12 @@
           {
             "text": "A great read",
             "author": "John Doe",
-            "date": "2019-01-01"
+            "date": "01/01/2019"
           },
           {
             "text": "A classic",
             "author": "Jane Doe",
-            "date": "2019-01-02"
+            "date": "01/02/2019"
           }
         ],
         "isbn": "978-0-618-00222-9",
@@ -554,7 +554,7 @@
         "genre": "Fantasy",
         "price": 14.99,
         "quantity": 80,
-        "publication_date": "1937-09-21",
+        "publication_date": "09/21/1937",
         "publisher": "George Allen & Unwin",
         "cover_image_url": "The_Hobbit.jpg",
         "rating": 3.8,
