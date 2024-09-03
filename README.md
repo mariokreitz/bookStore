@@ -1,10 +1,8 @@
-Great! Here's the updated README with the correct project structure:
-
----
-
 # 📚 BookStore
 
 Welcome to **BookStore** — a simple and clean template website that serves as a foundation for experimenting with JavaScript templates and data fetching. This project fetches data from a local JSON file and renders it dynamically using JavaScript templates.
+
+![Preview](https://raw.githubusercontent.com/mariokreitz/bookStore/main/preview.png)
 
 ## 🌟 Features
 
@@ -27,7 +25,7 @@ Before you begin, ensure you have met the following requirements:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/bookStore.git
+   git clone https://github.com/mariokreitz/bookStore.git
    ```
 
 2. **Navigate to the Project Directory**:
@@ -101,11 +99,4 @@ Contributions are welcome! Please follow these steps:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
 
-- Thanks to all the open-source projects and contributors that inspired this project.
-- [Your Inspiration Source Here]
-
----
-
-This README now reflects the correct project structure, making it easy for others to navigate and understand your project. You can further customize the README as needed.
