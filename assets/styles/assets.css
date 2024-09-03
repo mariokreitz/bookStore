@@ -156,7 +156,7 @@ aside#side-navbar h1 {
 }
 
 .star.filled > svg {
-  fill: yellow;
+  fill: orange;
 }
 
 .star > svg {
@@ -335,6 +335,7 @@ td:first-child {
   font-size: 18px;
   color: var(--secondary-text-color);
   resize: none;
+  width: 100%;
 }
 
 .add-review-form button[type="submit"] {
@@ -453,6 +454,14 @@ textarea:focus {
   .top-navbar a {
     margin: 9px 5px 18px 5px;
   }
+
+  .card-description {
+    align-items: center;
+  }
+
+  .call-to-action {
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -466,14 +475,12 @@ textarea:focus {
 
   .call-to-action {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
   }
 
   .in-stock-container {
-    width: 100%;
-    gap: unset;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   th,
@@ -500,17 +507,7 @@ textarea:focus {
     padding: unset;
   }
 
-  .card-description {
-    align-items: center;
-  }
-
   .call-to-action {
-    align-items: center;
-    gap: 20px;
-  }
-
-  .in-stock-container {
-    flex-direction: column;
     align-items: center;
     gap: 20px;
   }
