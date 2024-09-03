@@ -43,7 +43,7 @@ svg {
 .top-navbar {
   justify-content: center;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
 }
 
 .top-navbar a:hover,
@@ -363,4 +363,136 @@ textarea:valid {
 
 textarea:focus {
   outline: none;
+}
+
+.notification {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1124px) {
+  .card-header {
+    gap: 20px;
+  }
+
+  .card-image {
+    height: 350px;
+  }
+
+  .card-description {
+    gap: 20px;
+  }
+
+  .book-description {
+    font-size: 16px;
+  }
+
+  .in-stock-container {
+    gap: 40px;
+  }
+
+  .in-stock {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  th,
+  td {
+    padding: 10px 26px 10px 15px;
+    font-size: 16px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .horizontal-line {
+    margin-block: 20px;
+  }
+
+  .comment {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 916px) {
+  #side-navbar {
+    display: none !important;
+  }
+
+  .book-description {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .card-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-image {
+    width: 50%;
+    height: auto;
+  }
+
+  .top-navbar {
+    flex-wrap: wrap;
+  }
+
+  .top-navbar a {
+    margin: 9px 5px 18px 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: unset !important;
+  }
+
+  .header-container {
+    padding: 0 20px !important;
+  }
+
+  .call-to-action {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .in-stock-container {
+    width: 100%;
+    gap: unset;
+    justify-content: space-between;
+  }
+
+  th,
+  td {
+    padding: 5px 13px 5px 7px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .card-body {
+    display: none;
+  }
+
+  .comment-header {
+    flex-direction: column;
+  }
+
+  .comment-text {
+    padding: unset;
+  }
 }
