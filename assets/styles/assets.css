@@ -1,0 +1,263 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+
+.home-link > svg {
+  fill: var(--primary-color);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav svg {
+  fill: var(--secondary-text-color);
+}
+
+nav svg:hover {
+  fill: var(--primary-text-color);
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+}
+
+#top-navbar {
+  box-shadow: inset 0px 10px 20px -15px rgba(0, 0, 0, 0.15), 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.top-navbar {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.top-navbar a:hover,
+.active {
+  text-decoration: underline var(--primary-color);
+  text-underline-offset: 15px;
+  text-decoration-thickness: 4px;
+}
+
+#main {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.breadcrumb-container {
+  color: lightgrey;
+}
+
+.breadcrumb-container a:last-child {
+  color: var(--primary-color);
+}
+
+aside#side-navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+aside#side-navbar h1 {
+  font-size: 24px;
+}
+
+.side-navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  color: var(--secondary-text-color);
+}
+
+.side-navbar > .selected {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.side-navbar a:hover {
+  color: var(--primary-text-color);
+}
+
+#content {
+  flex: 1;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.card {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  gap: 52px;
+}
+
+.card-image {
+  aspect-ratio: 9/16;
+  height: 450px;
+  object-fit: cover;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.card-author {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+}
+
+.rating {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+}
+
+.rating > span {
+  color: var(--secondary-text-color);
+}
+
+.star > svg {
+  height: 18px;
+  width: unset;
+}
+
+.star.filled > svg {
+  fill: yellow;
+}
+
+.star > svg {
+  fill: var(--secondary-text-color);
+}
+
+.price {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price .original {
+  text-decoration: line-through;
+  color: var(--secondary-text-color);
+}
+
+.price .discount {
+  color: var(--primary-color);
+  border: solid 2px var(--primary-color);
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.book-description {
+  font-size: 18px;
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heart-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.in-stock-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.in-stock {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn {
+  border: solid 2px var(--primary-color);
+  border-radius: 9999px;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--white);
+  color: black;
+  border: solid 2px var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.card-body {
+  margin-block: 52px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid lightgrey;
+  padding: 20px 52px 20px 30px;
+  text-align: left;
+  font-size: 18px;
+  color: var(--secondary-text-color);
+}
+
+th:first-child,
+td:first-child {
+  background-color: rgb(233, 233, 233);
+  width: 1%;
+  white-space: nowrap;
+}
