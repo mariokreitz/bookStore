@@ -24,8 +24,8 @@ export async function putData(url, data) {
       const error = (data && data.message) || response.status;
       return Promise.reject(error);
     }
-    const data = await response.json();
-    return data;
+    const reponse = await response.json();
+    return reponse;
   } catch (error) {
     console.error(error.message);
   }
