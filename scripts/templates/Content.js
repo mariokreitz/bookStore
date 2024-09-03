@@ -5,13 +5,23 @@ export default async function Content(HeartEmpty, HeartFilled, StarEmpty, StarFi
   const data = await getData("./../../data/bookstore.json");
   const books = data.bookstore.inventory;
 
-  return /*html*/ `
-    <div class="content-container">
-      ${books
-        .map((book) => {
-          return Card(book, HeartEmpty, HeartFilled, StarEmpty, StarFilled);
-        })
-        .join("")}
-    </div>
-  `;
+  if (!books) {
+    return /*html*/ `
+      <div class="content-container">
+        <p>No books in inventory</p>
+      </div>
+    `;
+  } else {
+    const cardsHtml = books
+      .map((book, index) => {
+        return Card(book, index, HeartEmpty, HeartFilled, StarEmpty, StarFilled);
+      })
+      .join("");
+
+    const container = document.createElement("div");
+    container.className = "content-container";
+    container.innerHTML = cardsHtml;
+
+    return container.outerHTML;
+  }
 }
