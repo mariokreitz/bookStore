@@ -104,17 +104,17 @@ export default function Card(book, index, HeartEmpty, HeartFilled, StarEmpty, St
             <div class="add-review-container">
                 <h3 class="card-title lato-bold">Add Your Review</h3>
                 <div class="horizontal-line"></div>
-                <div id="form-${currentBookIndex}" class="add-review-form">
+                <form id="form-${currentBookIndex}" class="add-review-form">
                     <div class="form-group">
                         <label for="name-${currentBookIndex}">Name</label>
-                        <input type="text" minlength="3" placeholder="min. 3 characters" maxlength="20" id="name-${currentBookIndex}" class="form-control" name="name" required>
+                        <input type="text" minlength="3" placeholder="min. 3 characters" maxlength="20" id="name-${currentBookIndex}" class="form-control" name="author" required>
                     </div>
                     <div class="form-group">
                         <label for="comment-${currentBookIndex}">Comment</label>
-                        <textarea id="comment-${currentBookIndex}" placeholder="min. 10 characters" minlength="10" rows="5" cols="30" class="form-control" name="comment" required></textarea>
+                        <textarea id="comment-${currentBookIndex}" placeholder="min. 10 characters" minlength="10" rows="5" cols="30" class="form-control" name="text" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" data-book-index="${index}">Submit</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
