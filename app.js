@@ -12,6 +12,9 @@ import {
   StarFilled,
   User,
 } from "./scripts/templates/icons.js";
+import { getData, putData } from "./scripts/FetchData.js";
+
+let books = {};
 
 document.addEventListener("DOMContentLoaded", () => {
   const { header, topNavbar, sideNavbar, content, footer } = getAllElements();
@@ -50,13 +53,22 @@ const sideNavbarItems = [
 ];
 
 async function renderPage(header, topNavbar, sideNavbar, content, footer) {
+  await loadData();
+
   header.innerHTML = Header(Bookmark, ShoppingCart, User);
   topNavbar.innerHTML = TopNavbar(topNavbarItems);
   sideNavbar.innerHTML = SideNavbar(sideNavbarItems);
-  content.innerHTML = await Content(HeartEmpty, HeartFilled, StarEmpty, StarFilled);
+  content.innerHTML = Content(books, HeartEmpty, HeartFilled, StarEmpty, StarFilled);
   footer.innerHTML = Footer();
 
   addEventListenersToSubmitButtons();
+}
+
+async function loadData() {
+  const localData = JSON.parse(localStorage.getItem("data"));
+  const remoteData = localData || (await getData("../../data/bookstore.json"));
+  localStorage.setItem("data", JSON.stringify(remoteData));
+  books = remoteData.bookstore.inventory;
 }
 
 function addEventListenersToSubmitButtons() {
@@ -67,5 +79,15 @@ function addEventListenersToSubmitButtons() {
 }
 
 function handleButtonClick(event) {
-  console.log("Button clicked in app.js for book:", event.target.dataset.bookIndex);
+  const formData = new FormData(event.target.parentElement);
+  const data = Object.fromEntries(formData.entries());
+
+  const bookIndex = Number(event.target.dataset.bookIndex);
+  const book = books[bookIndex];
+
+  const newComments = [...book.comments, { ...data, date: new Date() }];
+  book.comments = newComments;
+  const localData = JSON.parse(localStorage.getItem("data"));
+  localData.bookstore.inventory[bookIndex] = book;
+  localStorage.setItem("data", JSON.stringify(localData));
 }
