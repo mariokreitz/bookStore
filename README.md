@@ -1,4 +1,4 @@
-# 📚 BookStore
+# 📚 BookStore [![Netlify Status](https://api.netlify.com/api/v1/badges/d38b95b2-093f-4059-9ceb-6116b00e0fc0/deploy-status)](https://app.netlify.com/sites/simple-bookshop/deploys)
 
 Welcome to **BookStore** — a simple and clean template website that serves as a foundation for experimenting with JavaScript templates and data fetching. This project fetches data from a local JSON file and renders it dynamically using JavaScript templates.
 
