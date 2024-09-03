@@ -2,7 +2,7 @@ import Header from "./scripts/templates/header.js";
 import TopNavbar from "./scripts/templates/TopNavbar.js";
 import SideNavbar from "./scripts/templates/SideNavbar.js";
 import Content from "./scripts/templates/Content.js";
-// import Footer from "./scripts/templates/Footer.js";
+import Footer from "./scripts/templates/Footer.js";
 import {
   Bookmark,
   ShoppingCart,
@@ -54,5 +54,5 @@ async function renderPage(header, topNavbar, sideNavbar, content, footer) {
   topNavbar.innerHTML = TopNavbar(topNavbarItems);
   sideNavbar.innerHTML = SideNavbar(sideNavbarItems);
   content.innerHTML = await Content(HeartEmpty, HeartFilled, StarEmpty, StarFilled);
-  //   footer.innerHTML = Footer();
+  footer.innerHTML = Footer();
 }
