@@ -56,7 +56,7 @@ export default function Card(book, index, HeartEmpty, HeartFilled, StarEmpty, St
         <div class="card-body">
             <table>
                 <tr>
-                    <td>currentBook Title</td>
+                    <td>Title</td>
                     <td>${currentBook.title}</td>
                 </tr>
                 <tr>
