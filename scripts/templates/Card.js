@@ -1,48 +1,51 @@
-export default function Card(book, HeartEmpty, HeartFilled, StarEmpty, StarFilled) {
+export default function Card(book, index, HeartEmpty, HeartFilled, StarEmpty, StarFilled) {
+  const currentBook = book;
+  const currentBookIndex = index;
+
   function getDiscount() {
-    return book.price * 0.2;
+    return currentBook.price * 0.2;
   }
 
-  function calcPrice(bookPrice) {
-    return formatPrice(bookPrice - getDiscount());
+  function calcPrice(currentBookPrice) {
+    return formatPrice(currentBookPrice - getDiscount());
   }
 
-  function formatPrice(bookPrice) {
-    return bookPrice.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+  function formatPrice(currentBookPrice) {
+    return currentBookPrice.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
   }
 
   return /*html*/ `
     <div class="card">
         <div class="card-header">
-            <img class="card-image" src="./assets/img/${book.cover_image_url}" alt="${book.title}">
+            <img class="card-image" src="./assets/img/${currentBook.cover_image_url}" alt="${currentBook.title}">
             <div class="card-description">
-                <h2 class="card-title lato-bold">${book.title}</h2>
-                <p class="card-author">Author: ${book.author}</p>
+                <h2 class="card-title lato-bold">${currentBook.title}</h2>
+                <p class="card-author">Author: ${currentBook.author}</p>
                 <div class="rating">
-                    <span>${book.rating}</span>
+                    <span>${currentBook.rating}</span>
                     <div class="stars">
-                    ${Array(Math.round(book.rating))
+                    ${Array(Math.round(currentBook.rating))
                       .fill(0)
                       .map((_) => `<span class="star filled">${StarFilled}</span>`)
-                      .join("")}${Array(5 - Math.round(book.rating))
+                      .join("")}${Array(5 - Math.round(currentBook.rating))
     .fill(0)
     .map((_) => `<span class="star">${StarEmpty}</span>`)
     .join("")}
                     </div>
-                    <span>${book.reviews} reviews</span>
+                    <span>${currentBook.reviews} reviews</span>
                 </div>
                 <div class="price">
-                    <span class="original">${formatPrice(book.price)}</span>
-                    <span class="discount">${calcPrice(book.price)}</span>
+                    <span class="original">${formatPrice(currentBook.price)}</span>
+                    <span class="discount">${calcPrice(currentBook.price)}</span>
                 </div>
-                <div class="book-description">${book.description}</div>
+                <div class="book-description">${currentBook.description}</div>
                 <div class="call-to-action">
                     <div class="heart-container">
-                        <span class="heart">${HeartEmpty}</span>
-                        <span>${book.likes}</span>
+                        <span onclick="likeBook(${currentBookIndex})" class="heart">${HeartEmpty}</span>
+                        <span>${currentBook.likes}</span>
                     </div>
                     <div class="in-stock-container">
-                        <span class="in-stock">In Stock: ${book.quantity}</span>
+                        <span class="in-stock">In Stock: ${currentBook.quantity}</span>
                         <button class="btn btn-primary">Add to Cart</button>
                     </div>
                 </div>
@@ -51,24 +54,24 @@ export default function Card(book, HeartEmpty, HeartFilled, StarEmpty, StarFille
         <div class="card-body">
             <table>
                 <tr>
-                    <td>Book Title</td>
-                    <td>${book.title}</td>
+                    <td>currentBook Title</td>
+                    <td>${currentBook.title}</td>
                 </tr>
                 <tr>
                     <td>Author</td>
-                    <td>${book.author}</td>
+                    <td>${currentBook.author}</td>
                 </tr>
                 <tr>
                     <td>ISBN</td>
-                    <td>${book.isbn}</td>
+                    <td>${currentBook.isbn}</td>
                 </tr>
                 <tr>
                     <td>Publisher</td>
-                    <td>${book.publisher}</td>
+                    <td>${currentBook.publisher}</td>
                 </tr>
                 <tr>
                     <td>Publish Date</td>
-                    <td>${book.publication_date}</td>
+                    <td>${currentBook.publication_date}</td>
                 </tr>
             </table>
         </div>
@@ -76,7 +79,7 @@ export default function Card(book, HeartEmpty, HeartFilled, StarEmpty, StarFille
             <h3 class="card-title lato-bold">Community Reviews</h3>
             <div class="horizontal-line"></div>
             <div class="reviews-container">
-                ${book.comments
+                ${currentBook.comments
                   .map((comment) => {
                     return /*html*/ `
                       <div class="comment">
@@ -101,17 +104,17 @@ export default function Card(book, HeartEmpty, HeartFilled, StarEmpty, StarFille
             <div class="add-review-container">
                 <h3 class="card-title lato-bold">Add Your Review</h3>
                 <div class="horizontal-line"></div>
-                <form class="add-review-form">
+                <div id="form-${currentBookIndex}" class="add-review-form">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" class="form-control" name="name" required>
+                        <label for="name-${currentBookIndex}">Name</label>
+                        <input type="text" minlength="3" placeholder="min. 3 characters" maxlength="20" id="name-${currentBookIndex}" class="form-control" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="comment">Comment</label>
-                        <textarea id="comment" rows="5" cols="30" class="form-control" name="comment" required></textarea>
+                        <label for="comment-${currentBookIndex}">Comment</label>
+                        <textarea id="comment-${currentBookIndex}" placeholder="min. 10 characters" minlength="10" rows="5" cols="30" class="form-control" name="comment" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                    <button type="submit" class="btn btn-primary" data-book-index="${index}">Submit</button>
+                </div>
             </div>
         </div>
     </div>
