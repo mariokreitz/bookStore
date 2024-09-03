@@ -1,6 +1,6 @@
-import Header from "./scripts/templates/header.js";
+import Header from "./scripts/templates/Header.js";
 import TopNavbar from "./scripts/templates/TopNavbar.js";
-import SideNavbar from "./scripts/templates/SideNavbar.js";
+import SideNavbar from "./scripts/templates/SideNavBar.js";
 import Content from "./scripts/templates/Content.js";
 import Footer from "./scripts/templates/Footer.js";
 import {
@@ -68,7 +68,7 @@ async function fetchLocalData() {
     return JSON.parse(storedData);
   }
 
-  const response = await fetch("../../data/bookstore.json");
+  const response = await fetch("./data/bookstore.json");
   const remoteData = await response.json();
 
   localStorage.setItem("data", JSON.stringify(remoteData));
