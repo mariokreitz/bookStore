@@ -41,7 +41,9 @@ export default function Card(book, index, HeartEmpty, HeartFilled, StarEmpty, St
                 <div class="book-description">${currentBook.description}</div>
                 <div class="call-to-action">
                     <div class="heart-container">
-                        <span onclick="likeBook(${currentBookIndex})" class="heart">${HeartEmpty}</span>
+                        <span class="heart" data-book-index="${index}">${
+    currentBook.favorite ? HeartFilled : HeartEmpty
+  }</span>
                         <span>${currentBook.likes}</span>
                     </div>
                     <div class="in-stock-container">
