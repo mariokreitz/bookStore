@@ -99,12 +99,13 @@ function handleAddComment(event) {
   const commentForm = event.target.parentElement;
 
   const formData = new FormData(commentForm);
-  if (formData.keys.length === 0) {
+  const commentData = Object.fromEntries(formData);
+
+  if (!commentData.author || !commentData.text) {
     showError(commentForm);
     return;
   }
 
-  const commentData = Object.fromEntries(formData);
   const bookIndex = Number(commentForm.dataset.bookIndex);
 
   const book = books[bookIndex];
